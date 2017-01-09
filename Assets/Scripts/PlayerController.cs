@@ -133,6 +133,7 @@ public class PlayerController : MonoBehaviour
 
             //Debug.Log("PlayerController:Update:projectile fired! pos=" + projectilePosition);
 
+            _headAnimator.SetTrigger("BlinkTrigger");
             _firingCooldown = true;
             Invoke("OnFiringCooldownComplete", _firingSpeed);
         }
