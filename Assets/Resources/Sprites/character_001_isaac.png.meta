@@ -1,12 +1,266 @@
 fileFormatVersion: 2
 guid: 75535e64820a4224fabc27e2fc8842a3
-timeCreated: 1484642289
+timeCreated: 1484658396
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
-    21300000: isaac_head_down_0
-    21300002: isaac_head_down_1
+    21300000: character_001_isaac_0
+    21300002: character_001_isaac_1
     21300004: isaac_legs_down_0
+    21300006: character_001_isaac_2
+    21300008: character_001_isaac_3
+    21300010: character_001_isaac_4
+    21300012: character_001_isaac_5
+    21300014: character_001_isaac_6
+    21300016: character_001_isaac_7
+    21300018: character_001_isaac_8
+    21300020: character_001_isaac_9
+    21300022: character_001_isaac_10
+    21300024: character_001_isaac_11
+    21300026: character_001_isaac_12
+    21300028: character_001_isaac_13
+    21300030: character_001_isaac_14
+    21300032: character_001_isaac_15
+    21300034: character_001_isaac_16
+    21300036: character_001_isaac_17
+    21300038: character_001_isaac_18
+    21300040: character_001_isaac_19
+    21300042: character_001_isaac_20
+    21300044: character_001_isaac_21
+    21300046: character_001_isaac_22
+    21300048: character_001_isaac_23
+    21300050: character_001_isaac_24
+    21300052: character_001_isaac_25
+    21300054: character_001_isaac_26
+    21300056: character_001_isaac_27
+    21300058: character_001_isaac_28
+    21300060: character_001_isaac_29
+    21300062: character_001_isaac_30
+    21300064: character_001_isaac_31
+    21300066: character_001_isaac_32
+    21300068: character_001_isaac_33
+    21300070: character_001_isaac_34
+    21300072: character_001_isaac_35
+    21300074: character_001_isaac_36
+    21300076: character_001_isaac_37
+    21300078: character_001_isaac_38
+    21300080: character_001_isaac_39
+    21300082: character_001_isaac_40
+    21300084: character_001_isaac_41
+    21300086: character_001_isaac_42
+    21300088: character_001_isaac_43
+    21300090: character_001_isaac_44
+    21300092: character_001_isaac_45
+    21300094: character_001_isaac_46
+    21300096: character_001_isaac_47
+    21300098: character_001_isaac_48
+    21300100: character_001_isaac_49
+    21300102: character_001_isaac_50
+    21300104: character_001_isaac_51
+    21300106: character_001_isaac_52
+    21300108: character_001_isaac_53
+    21300110: character_001_isaac_54
+    21300112: character_001_isaac_55
+    21300114: character_001_isaac_56
+    21300116: character_001_isaac_57
+    21300118: character_001_isaac_58
+    21300120: character_001_isaac_59
+    21300122: character_001_isaac_60
+    21300124: character_001_isaac_61
+    21300126: character_001_isaac_62
+    21300128: character_001_isaac_63
+    21300130: character_001_isaac_64
+    21300132: character_001_isaac_65
+    21300134: character_001_isaac_66
+    21300136: character_001_isaac_67
+    21300138: character_001_isaac_68
+    21300140: character_001_isaac_69
+    21300142: character_001_isaac_70
+    21300144: character_001_isaac_71
+    21300146: character_001_isaac_72
+    21300148: character_001_isaac_73
+    21300150: character_001_isaac_74
+    21300152: character_001_isaac_75
+    21300154: character_001_isaac_76
+    21300156: character_001_isaac_77
+    21300158: character_001_isaac_78
+    21300160: character_001_isaac_79
+    21300162: character_001_isaac_80
+    21300164: character_001_isaac_81
+    21300166: character_001_isaac_82
+    21300168: character_001_isaac_83
+    21300170: character_001_isaac_84
+    21300172: character_001_isaac_85
+    21300174: character_001_isaac_86
+    21300176: character_001_isaac_87
+    21300178: character_001_isaac_88
+    21300180: character_001_isaac_89
+    21300182: character_001_isaac_90
+    21300184: character_001_isaac_91
+    21300186: character_001_isaac_92
+    21300188: character_001_isaac_93
+    21300190: character_001_isaac_94
+    21300192: character_001_isaac_95
+    21300194: character_001_isaac_96
+    21300196: character_001_isaac_97
+    21300198: character_001_isaac_98
+    21300200: character_001_isaac_99
+    21300202: character_001_isaac_100
+    21300204: character_001_isaac_101
+    21300206: character_001_isaac_102
+    21300208: character_001_isaac_103
+    21300210: character_001_isaac_104
+    21300212: character_001_isaac_105
+    21300214: character_001_isaac_106
+    21300216: character_001_isaac_107
+    21300218: character_001_isaac_108
+    21300220: character_001_isaac_109
+    21300222: character_001_isaac_110
+    21300224: character_001_isaac_111
+    21300226: character_001_isaac_112
+    21300228: character_001_isaac_113
+    21300230: character_001_isaac_114
+    21300232: character_001_isaac_115
+    21300234: character_001_isaac_116
+    21300236: character_001_isaac_117
+    21300238: character_001_isaac_118
+    21300240: character_001_isaac_119
+    21300242: character_001_isaac_120
+    21300244: character_001_isaac_121
+    21300246: character_001_isaac_122
+    21300248: character_001_isaac_123
+    21300250: character_001_isaac_124
+    21300252: character_001_isaac_125
+    21300254: character_001_isaac_126
+    21300256: character_001_isaac_127
+    21300258: character_001_isaac_128
+    21300260: character_001_isaac_129
+    21300262: character_001_isaac_130
+    21300264: character_001_isaac_131
+    21300266: character_001_isaac_132
+    21300268: character_001_isaac_133
+    21300270: character_001_isaac_134
+    21300272: character_001_isaac_135
+    21300274: character_001_isaac_136
+    21300276: character_001_isaac_137
+    21300278: character_001_isaac_138
+    21300280: character_001_isaac_139
+    21300282: character_001_isaac_140
+    21300284: character_001_isaac_141
+    21300286: character_001_isaac_142
+    21300288: character_001_isaac_143
+    21300290: character_001_isaac_144
+    21300292: character_001_isaac_145
+    21300294: character_001_isaac_146
+    21300296: character_001_isaac_147
+    21300298: character_001_isaac_148
+    21300300: character_001_isaac_149
+    21300302: character_001_isaac_150
+    21300304: character_001_isaac_151
+    21300306: character_001_isaac_152
+    21300308: character_001_isaac_153
+    21300310: character_001_isaac_154
+    21300312: character_001_isaac_155
+    21300314: character_001_isaac_156
+    21300316: character_001_isaac_157
+    21300318: character_001_isaac_158
+    21300320: character_001_isaac_159
+    21300322: character_001_isaac_160
+    21300324: character_001_isaac_161
+    21300326: character_001_isaac_162
+    21300328: character_001_isaac_163
+    21300330: character_001_isaac_164
+    21300332: character_001_isaac_165
+    21300334: character_001_isaac_166
+    21300336: character_001_isaac_167
+    21300338: character_001_isaac_168
+    21300340: character_001_isaac_169
+    21300342: character_001_isaac_170
+    21300344: character_001_isaac_171
+    21300346: character_001_isaac_172
+    21300348: character_001_isaac_173
+    21300350: character_001_isaac_174
+    21300352: character_001_isaac_175
+    21300354: character_001_isaac_176
+    21300356: character_001_isaac_177
+    21300358: character_001_isaac_178
+    21300360: character_001_isaac_179
+    21300362: character_001_isaac_180
+    21300364: character_001_isaac_181
+    21300366: character_001_isaac_182
+    21300368: character_001_isaac_183
+    21300370: character_001_isaac_184
+    21300372: character_001_isaac_185
+    21300374: character_001_isaac_186
+    21300376: character_001_isaac_187
+    21300378: character_001_isaac_188
+    21300380: character_001_isaac_189
+    21300382: character_001_isaac_190
+    21300384: character_001_isaac_191
+    21300386: character_001_isaac_192
+    21300388: character_001_isaac_193
+    21300390: character_001_isaac_194
+    21300392: character_001_isaac_195
+    21300394: character_001_isaac_196
+    21300396: character_001_isaac_197
+    21300398: character_001_isaac_198
+    21300400: character_001_isaac_199
+    21300402: character_001_isaac_200
+    21300404: character_001_isaac_201
+    21300406: character_001_isaac_202
+    21300408: character_001_isaac_203
+    21300410: character_001_isaac_204
+    21300412: character_001_isaac_205
+    21300414: character_001_isaac_206
+    21300416: character_001_isaac_207
+    21300418: character_001_isaac_208
+    21300420: character_001_isaac_209
+    21300422: character_001_isaac_210
+    21300424: character_001_isaac_211
+    21300426: character_001_isaac_212
+    21300428: character_001_isaac_213
+    21300430: character_001_isaac_214
+    21300432: character_001_isaac_215
+    21300434: character_001_isaac_216
+    21300436: character_001_isaac_217
+    21300438: character_001_isaac_218
+    21300440: character_001_isaac_219
+    21300442: character_001_isaac_220
+    21300444: character_001_isaac_221
+    21300446: character_001_isaac_222
+    21300448: character_001_isaac_223
+    21300450: character_001_isaac_224
+    21300452: character_001_isaac_225
+    21300454: character_001_isaac_226
+    21300456: character_001_isaac_227
+    21300458: character_001_isaac_228
+    21300460: character_001_isaac_229
+    21300462: character_001_isaac_230
+    21300464: character_001_isaac_231
+    21300466: character_001_isaac_232
+    21300468: character_001_isaac_233
+    21300470: character_001_isaac_234
+    21300472: character_001_isaac_235
+    21300474: character_001_isaac_236
+    21300476: character_001_isaac_237
+    21300478: character_001_isaac_238
+    21300480: character_001_isaac_239
+    21300482: character_001_isaac_240
+    21300484: character_001_isaac_241
+    21300486: character_001_isaac_242
+    21300488: character_001_isaac_243
+    21300490: character_001_isaac_244
+    21300492: character_001_isaac_245
+    21300494: character_001_isaac_246
+    21300496: character_001_isaac_247
+    21300498: character_001_isaac_248
+    21300500: character_001_isaac_249
+    21300502: character_001_isaac_250
+    21300504: character_001_isaac_251
+    21300506: character_001_isaac_252
+    21300508: character_001_isaac_253
+    21300510: character_001_isaac_254
+    21300512: character_001_isaac_255
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -73,39 +327,338 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: isaac_head_down_0
+      name: character_001_isaac_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 485
-        width: 28
-        height: 25
+        x: 0
+        y: 480
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: isaac_head_down_1
+      name: character_001_isaac_1
       rect:
         serializedVersion: 2
-        x: 34
-        y: 484
-        width: 28
-        height: 24
+        x: 32
+        y: 480
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: isaac_legs_down_0
+      name: character_001_isaac_2
       rect:
         serializedVersion: 2
-        x: 7
-        y: 455
-        width: 18
-        height: 13
+        x: 64
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_001_isaac_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_001_isaac_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_001_isaac_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_001_isaac_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_001_isaac_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_001_isaac_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_001_isaac_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_001_isaac_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_001_isaac_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_001_isaac_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_001_isaac_21
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_001_isaac_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_001_isaac_23
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_001_isaac_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_001_isaac_33
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_001_isaac_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_001_isaac_35
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_001_isaac_36
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_001_isaac_37
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_001_isaac_38
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_001_isaac_39
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_001_isaac_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_001_isaac_49
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 384
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
