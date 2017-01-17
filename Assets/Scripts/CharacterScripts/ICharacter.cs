@@ -6,11 +6,19 @@ public interface ICharacter
 {
 	Team Team{ get; }
 
-	void ApplyDamage (int damage);
-}
+	WeaponType WeaponType{ get; }
 
-public enum Team
-{
-	Player,
-	Enemy
+	Vector3 Position{ get; }
+
+	Vector2 FiringDirection{ get; }
+
+	float ProjectileRange{ get; }
+
+	float ProjectileSpeed{ get; }
+
+	int ProjectileDamage{ get; }
+
+	//================================================
+
+	void ApplyDamage (int damage);
 }

@@ -7,10 +7,13 @@ public class TearProjectile : MonoBehaviour, IProjectile
 	private Rigidbody2D _rigidBody;
 
 	private Team _team;
-	private Vector2 _movementDirection = new Vector2 (0, 0);
+	private Vector2 _movementDirection;
 	private float _range;
 	private float _speed;
 	private int _damage;
+
+	private Vector3 _previousPosition;
+	private float _movedDistance;
 
 	// Use this for initialization
 	void Start ()
@@ -18,13 +21,20 @@ public class TearProjectile : MonoBehaviour, IProjectile
 		_rigidBody = this.GetComponent<Rigidbody2D> ();
 
 		this.transform.up = _movementDirection;
-		_rigidBody.velocity = _movementDirection;
+		_rigidBody.velocity = _movementDirection * _speed;
+
+		_previousPosition = this.transform.position;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		//_rigidBody.velocity = _movementDirection;
+		_movedDistance += (this.transform.position - _previousPosition).magnitude;
+		_previousPosition = this.transform.position;
+
+		if (_movedDistance >= _range) {
+			Destroy (this.gameObject);
+		}
 	}
 
 	void OnTriggerEnter2D (Collider2D other)
