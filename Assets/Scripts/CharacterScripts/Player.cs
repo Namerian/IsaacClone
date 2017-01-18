@@ -31,6 +31,17 @@ public class Player : MonoBehaviour, ICharacter
 	private Animator _legsAnimator;
 	private SpriteRenderer _legsRenderer;
 
+	//================================
+
+	private Text _healthPointsViewText;
+	private Text _movementSpeedViewText;
+	private Text _firingSpeedViewText;
+	private Text _projectileRangeViewText;
+	private Text _projectileSpeedViewText;
+	private Text _projectileDamageViewText;
+
+	//================================
+
 	private Vector2 _movementDirection = new Vector2 (0, 0);
 	private Vector2 _firingDirection = new Vector2 (0, -1);
 
@@ -105,6 +116,15 @@ public class Player : MonoBehaviour, ICharacter
 
 	public int ProjectileDamage{ get { return _projectileDamage; } }
 
+	private int HealthPoints {
+		get{ return _healthPoints; }
+		set {
+			_healthPoints = value;
+
+			_healthPointsViewText.text = _healthPoints.ToString ();
+		}
+	}
+
 	//=================================================================
 	//
 	//=================================================================
@@ -121,6 +141,17 @@ public class Player : MonoBehaviour, ICharacter
 		Transform legs = this.transform.Find ("Legs");
 		_legsAnimator = legs.GetComponent<Animator> ();
 		_legsRenderer = legs.GetComponent<SpriteRenderer> ();
+
+		//===================
+
+		_healthPointsViewText = this.transform.Find ("Canvas/StatModificationPanel/HealthPointsView/Value").GetComponent<Text> ();
+		_movementSpeedViewText = this.transform.Find ("Canvas/StatModificationPanel/MovementSpeedView/Value").GetComponent<Text> ();
+		_firingSpeedViewText = this.transform.Find ("Canvas/StatModificationPanel/FiringSpeedView/Value").GetComponent<Text> ();
+		_projectileRangeViewText = this.transform.Find ("Canvas/StatModificationPanel/ProjectileRangeView/Value").GetComponent<Text> ();
+		_projectileSpeedViewText = this.transform.Find ("Canvas/StatModificationPanel/ProjectileSpeedView/Value").GetComponent<Text> ();
+		_projectileDamageViewText = this.transform.Find ("Canvas/StatModificationPanel/ProjectileDamageView/Value").GetComponent<Text> ();
+
+		//==================
 
 		_healthPoints = __healthPoints;
 		_movementSpeed = __movementSpeed;
@@ -157,7 +188,7 @@ public class Player : MonoBehaviour, ICharacter
 				_rigidBody.velocity = newMovementDirection * _movementSpeed;
 				_legsAnimator.SetBool ("Walking", true);
 			} else {
-				//_rigidBody.velocity = Vector2.zero;
+				_rigidBody.velocity = Vector2.zero;
 
 				_legsAnimator.SetBool ("Walking", false);
 			}
@@ -202,9 +233,9 @@ public class Player : MonoBehaviour, ICharacter
 			return;
 		}
 
-		_healthPoints -= damage;
+		HealthPoints -= damage;
 
-		if (_healthPoints <= 0) {
+		if (HealthPoints <= 0) {
 			_isAlive = false;
 			GameController.Instance.CharacterDied (this);
 		}
