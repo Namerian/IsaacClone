@@ -14,12 +14,12 @@ public class Player : MonoBehaviour, ICharacter
 	 * vitesse projectile
 	 * dégats projectile
 	 */
-	public int __healthPoints = 10;
-	public float __movementSpeed = 1;
-	public float __firingSpeed = 1;
-	public float __projectileRange = 5;
-	public float __projectileSpeed = 1.5f;
-	public int __projectileDamage = 1;
+	public int _healthPoints = 10;
+	public float _movementSpeed = 1;
+	public float _firingSpeed = 1;
+	public float _projectileRange = 3;
+	public float _projectileSpeed = 2;
+	public int _projectileDamage = 1;
 
 	//================================
 
@@ -50,13 +50,6 @@ public class Player : MonoBehaviour, ICharacter
 	private bool _isAlive = true;
 
 	private WeaponType _currentWeapon = WeaponType.BlueTear;
-
-	private int _healthPoints;
-	private float _movementSpeed;
-	private float _firingSpeed;
-	private float _projectileRange;
-	private float _projectileSpeed;
-	private int _projectileDamage;
 
 	//=================================================================
 	//
@@ -110,18 +103,56 @@ public class Player : MonoBehaviour, ICharacter
 		}
 	}
 
-	public float ProjectileRange{ get { return _projectileRange; } }
+	public float ProjectileRange { 
+		get { return _projectileRange; } 
+		set {
+			_projectileRange = Mathf.Clamp (value, 1, 5);
+			_projectileRangeViewText.text = _projectileRange.ToString ();
+		} 
+	}
 
-	public float ProjectileSpeed{ get { return _projectileSpeed; } }
+	public float ProjectileSpeed { 
+		get { return _projectileSpeed; } 
+		set {
+			_projectileSpeed = Mathf.Clamp (value, 1, 5);
+			_projectileSpeedViewText.text = _projectileSpeed.ToString ();
+		}
+	}
 
-	public int ProjectileDamage{ get { return _projectileDamage; } }
+	public int ProjectileDamage { 
+		get { return _projectileDamage; } 
+		set {
+			_projectileDamage = Mathf.Clamp (value, 1, 5); 
+			_projectileDamageViewText.text = _projectileDamage.ToString ();
+		}
+	}
 
 	private int HealthPoints {
 		get{ return _healthPoints; }
 		set {
-			_healthPoints = value;
-
+			_healthPoints = Mathf.Clamp (value, 0, 10);
 			_healthPointsViewText.text = _healthPoints.ToString ();
+
+			if (_healthPoints <= 0) {
+				_isAlive = false;
+				GameController.Instance.CharacterDied (this);
+			}
+		}
+	}
+
+	private float MovementSpeed {
+		get{ return _movementSpeed; } 
+		set {
+			_movementSpeed = Mathf.Clamp (value, 1, 5); 
+			_movementSpeedViewText.text = _movementSpeed.ToString ();
+		}
+	}
+
+	private float FiringSpeed {
+		get{ return _firingSpeed; }
+		set {
+			_firingSpeed = Mathf.Clamp (value, 1, 5); 
+			_firingSpeedViewText.text = _firingSpeed.ToString ();
 		}
 	}
 
@@ -153,12 +184,12 @@ public class Player : MonoBehaviour, ICharacter
 
 		//==================
 
-		_healthPoints = __healthPoints;
-		_movementSpeed = __movementSpeed;
-		_firingSpeed = __firingSpeed;
-		_projectileRange = __projectileRange;
-		_projectileSpeed = __projectileSpeed;
-		_projectileDamage = __projectileDamage;
+		HealthPoints = _healthPoints;
+		MovementSpeed = _movementSpeed;
+		FiringSpeed = _firingSpeed;
+		ProjectileRange = _projectileRange;
+		ProjectileSpeed = _projectileSpeed;
+		ProjectileDamage = _projectileDamage;
 
 		Event.Instance.OnGameEndedEvent += OnGameEndedEvent;
 	}
@@ -185,7 +216,7 @@ public class Player : MonoBehaviour, ICharacter
 			if (newMovementDirection.magnitude > 0) {
 				_movementDirection = newMovementDirection;
 
-				_rigidBody.velocity = newMovementDirection * _movementSpeed;
+				_rigidBody.velocity = newMovementDirection * MovementSpeed;
 				_legsAnimator.SetBool ("Walking", true);
 			} else {
 				_rigidBody.velocity = Vector2.zero;
@@ -217,7 +248,7 @@ public class Player : MonoBehaviour, ICharacter
 
 
 					_hasFired = true;
-					Invoke ("OnReloadingOver", _firingSpeed);
+					Invoke ("OnReloadingOver", 1 / FiringSpeed);
 				}
 			}
 		}
@@ -235,10 +266,7 @@ public class Player : MonoBehaviour, ICharacter
 
 		HealthPoints -= damage;
 
-		if (HealthPoints <= 0) {
-			_isAlive = false;
-			GameController.Instance.CharacterDied (this);
-		}
+
 	}
 
 	//=================================================================
@@ -282,6 +310,54 @@ public class Player : MonoBehaviour, ICharacter
 	{
 		if (value) {
 			_currentWeapon = WeaponType.SlalomTear;
+		}
+	}
+
+	public void OnStatDecreaseButtonPressed (string statName)
+	{
+		switch (statName) {
+		case "HealthPoints":
+			this.HealthPoints -= 1;
+			break;
+		case "MovementSpeed":
+			this.MovementSpeed -= 1;
+			break;
+		case "FiringSpeed":
+			this.FiringSpeed -= 1;
+			break;
+		case "ProjectileRange":
+			this.ProjectileRange -= 1;
+			break;
+		case "ProjectileSpeed":
+			this.ProjectileSpeed -= 1;
+			break;
+		case "ProjectileDamage":
+			this.ProjectileDamage -= 1;
+			break;
+		}
+	}
+
+	public void OnStatIncreaseButtonPressed (string statName)
+	{
+		switch (statName) {
+		case "HealthPoints":
+			this.HealthPoints += 1;
+			break;
+		case "MovementSpeed":
+			this.MovementSpeed += 1;
+			break;
+		case "FiringSpeed":
+			this.FiringSpeed += 1;
+			break;
+		case "ProjectileRange":
+			this.ProjectileRange += 1;
+			break;
+		case "ProjectileSpeed":
+			this.ProjectileSpeed += 1;
+			break;
+		case "ProjectileDamage":
+			this.ProjectileDamage += 1;
+			break;
 		}
 	}
 

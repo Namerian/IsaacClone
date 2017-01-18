@@ -17,6 +17,9 @@ public class MissileProjectile : MonoBehaviour, IProjectile
 	private bool _targetSet = false;
 	private ICharacter _target;
 
+	private Vector3 _previousPosition;
+	private float _movedDistance;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -24,11 +27,22 @@ public class MissileProjectile : MonoBehaviour, IProjectile
 
 		this.transform.up = _movementDirection;
 		_rigidBody.velocity = _movementDirection * _speed;
+
+		_previousPosition = this.transform.position;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
+		//****************************************
+		_movedDistance += (this.transform.position - _previousPosition).magnitude;
+		_previousPosition = this.transform.position;
+
+		if (_movedDistance >= _range) {
+			Destroy (this.gameObject);
+		}
+
+		//****************************************
 		if (_targetSet) {
 			if (_target == null) {
 				_targetSet = false;

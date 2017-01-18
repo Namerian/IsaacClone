@@ -65,14 +65,19 @@ public class KeeperEnemy : MonoBehaviour, ICharacter
 		_direction = playerDirection.normalized;
 
 		Vector2 randomDirection = new Vector2 (UnityEngine.Random.value, UnityEngine.Random.value);
-		int fleeing = 1;
 
-		if (playerDirection.magnitude < _hoverRange) {
-			fleeing = -1;
+		Vector2 velocity;
+
+		if (playerDirection.magnitude > _projectileRange) {
+			velocity = _direction * _movementSpeed;
+		} else if (playerDirection.magnitude < _hoverRange) {
+			velocity = -_direction * _movementSpeed;
+		} else {
+			velocity = randomDirection * _movementSpeed;
 		}
 
 		this.transform.up = _direction;
-		_rigidBody.velocity = (fleeing * _direction * _movementSpeed * 0.3f) + (randomDirection * _movementSpeed * 0.7f);
+		_rigidBody.velocity = velocity;
 
 		if (!_hasFired) {
 			ProjectileFactory.CreateProjectiles (this);
