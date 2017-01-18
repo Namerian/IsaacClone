@@ -28,6 +28,9 @@ public class Player : MonoBehaviour, ICharacter
 	private Animator _headAnimator;
 	private SpriteRenderer _headRenderer;
 
+	private Animator _legsAnimator;
+	private SpriteRenderer _legsRenderer;
+
 	private Vector2 _movementDirection = new Vector2 (0, 0);
 	private Vector2 _firingDirection = new Vector2 (0, -1);
 
@@ -60,18 +63,37 @@ public class Player : MonoBehaviour, ICharacter
 			if (_firingDirection != value) {
 				_firingDirection = value;
 
+				//UP
 				if (value.x == 0 && value.y == 1) {
 					_headRenderer.flipX = false;
 					_headAnimator.SetTrigger ("LookUp");
-				} else if (value.x == 0 && value.y == -1) {
+
+					_legsRenderer.flipX = true;
+					_legsAnimator.SetTrigger ("LookUp");
+				}
+				//DOWN
+				else if (value.x == 0 && value.y == -1) {
 					_headRenderer.flipX = false;
 					_headAnimator.SetTrigger ("LookDown");
-				} else if (value.x == -1 && value.y == 0) {
+
+					_legsRenderer.flipX = false;
+					_legsAnimator.SetTrigger ("LookDown");
+				}
+				//LEFT
+				else if (value.x == -1 && value.y == 0) {
 					_headRenderer.flipX = true;
 					_headAnimator.SetTrigger ("LookLeft");
-				} else if (value.x == 1 && value.y == 0) {
+
+					_legsRenderer.flipX = true;
+					_legsAnimator.SetTrigger ("LookLeft");
+				}
+				//RIGHT
+				else if (value.x == 1 && value.y == 0) {
 					_headRenderer.flipX = false;
 					_headAnimator.SetTrigger ("LookRight");
+
+					_legsRenderer.flipX = false;
+					_legsAnimator.SetTrigger ("LookRight");
 				}
 			}
 		}
@@ -95,6 +117,10 @@ public class Player : MonoBehaviour, ICharacter
 		Transform head = this.transform.Find ("Head");
 		_headAnimator = head.GetComponent<Animator> ();
 		_headRenderer = head.GetComponent<SpriteRenderer> ();
+
+		Transform legs = this.transform.Find ("Legs");
+		_legsAnimator = legs.GetComponent<Animator> ();
+		_legsRenderer = legs.GetComponent<SpriteRenderer> ();
 
 		_healthPoints = __healthPoints;
 		_movementSpeed = __movementSpeed;
@@ -126,11 +152,15 @@ public class Player : MonoBehaviour, ICharacter
 			}
 
 			if (newMovementDirection.magnitude > 0) {
-				Vector2 velocity = newMovementDirection;
-				_rigidBody.velocity = velocity;
-				_movementDirection = newMovementDirection * _movementSpeed;
+				_movementDirection = newMovementDirection;
+				Vector2 currentPos = new Vector2 (this.transform.position.x, this.transform.position.y);
+
+				_rigidBody.MovePosition (currentPos + (newMovementDirection * _movementSpeed * Time.deltaTime));
+				_legsAnimator.SetBool ("Walking", true);
 			} else {
-				_rigidBody.velocity = Vector2.zero;
+				//_rigidBody.velocity = Vector2.zero;
+
+				_legsAnimator.SetBool ("Walking", false);
 			}
 
 			//===========================================

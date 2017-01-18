@@ -50,6 +50,8 @@ public class KeeperEnemy : MonoBehaviour, ICharacter
 		_direction = (_player.Position - Position).normalized;
 
 		this.transform.up = _direction;
+
+		Event.Instance.OnGameEndedEvent += OnGameEndedEvent;
 	}
 	
 	// Update is called once per frame
