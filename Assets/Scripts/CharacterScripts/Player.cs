@@ -153,9 +153,8 @@ public class Player : MonoBehaviour, ICharacter
 
 			if (newMovementDirection.magnitude > 0) {
 				_movementDirection = newMovementDirection;
-				Vector2 currentPos = new Vector2 (this.transform.position.x, this.transform.position.y);
 
-				_rigidBody.MovePosition (currentPos + (newMovementDirection * _movementSpeed * Time.deltaTime));
+				_rigidBody.velocity = newMovementDirection * _movementSpeed;
 				_legsAnimator.SetBool ("Walking", true);
 			} else {
 				//_rigidBody.velocity = Vector2.zero;
